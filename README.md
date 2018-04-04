@@ -20,7 +20,7 @@ colors|arrayOf[object Object]||Yes|The colors associated with each category.
 background|string||Yes|Background color of the legend.
 width|number||Yes|Initial width of the legend.
 height|number||Yes|Initial height of the legend.
-onCategoryClick|func||No|onClick function has string in categories array for arg.
+onCategoryClick|func||No|onClick(categories[i]).
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
