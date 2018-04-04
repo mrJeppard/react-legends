@@ -22,8 +22,8 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import DiscreteColorLegendItem from 'legends/discrete-color-legend-item';
-import {DISCRETE_COLOR_RANGE} from 'theme';
+import DiscreteColorLegendItem from './discrete-color-legend-item';
+import {DISCRETE_COLOR_RANGE} from './theme';
 
 function DiscreteColorLegend({
   className,
@@ -34,11 +34,19 @@ function DiscreteColorLegend({
   onItemMouseEnter,
   onItemMouseLeave,
   orientation,
-  width
+  width, 
+  background,
+  title
 }) {
+    const LIGHT_BORDER = "1px solid white";
+    const DARK_BORDER = "1px solid black";
+    const border = background === "white" ? DARK_BORDER  : LIGHT_BORDER;
+    const attrNameColor = background === "white" ? "black"  : "white";
+    console.log(border)
   return (
-    <div className={`rv-discrete-color-legend ${orientation} ${className}`} style={{width, height}}>
-      {items.map((item, i) => (
+    <div className={`rv-discrete-color-legend ${orientation} ${className}`} style={{width, height, background, border}}>
+       <div style={{textAlign: "center", color: attrNameColor, fontSize:16}}> {title} </div>
+    {items.map((item, i) => (
         <DiscreteColorLegendItem
           title={item.title ? item.title : item}
           color={item.color ? item.color : colors[i % colors.length]}
@@ -48,6 +56,7 @@ function DiscreteColorLegend({
           onClick={onItemClick ? e => onItemClick(item, i, e) : null}
           onMouseEnter={onItemMouseEnter ? e => onItemMouseEnter(item, i, e) : null}
           onMouseLeave={onItemMouseEnter ? e => onItemMouseLeave(item, i, e) : null}
+          style={{borderWidth:10, borderColor:"white"}}
         />
       ))}
     </div>
