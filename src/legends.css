@@ -1,18 +1,16 @@
-$rv-legend-enabled-color: #3a3a48;
-$rv-legend-disabled-color: #b8b8b8;
 
 .rv-discrete-color-legend {
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow: auto;
   font-size: 12px;
-
+  white-space: nowrap;
   &.horizontal {
     white-space: nowrap;
   }
 }
 
 .rv-discrete-color-legend-item {
-  color: $rv-legend-enabled-color;
+  color: #3a3a48;
   border-radius: 1px;
   padding: 9px 10px;
 
@@ -29,9 +27,10 @@ $rv-legend-disabled-color: #b8b8b8;
 .rv-discrete-color-legend-item__color {
   background: #dcdcdc;
   display: inline-block;
-  height: 2px;
+  height: 16px;
   vertical-align: middle;
-  width: 14px;
+  width: 16px;
+  float: left;
 }
 
 .rv-discrete-color-legend-item__title {
@@ -39,7 +38,7 @@ $rv-legend-disabled-color: #b8b8b8;
 }
 
 .rv-discrete-color-legend-item.disabled {
-  color: $rv-legend-disabled-color;
+  color: #b8b8b8;
 }
 
 .rv-discrete-color-legend-item.clickable {
