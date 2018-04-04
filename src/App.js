@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CategoricalLegend from './categoricalLegend'
 import './legends.css';
 
-const CATEGORIES=["apples","oranges","man made orangutan"];
+const CATEGORIES=["apples","oranges","man made orangutans"];
 const COLORS=["#FF1000", "#00FF10", "#1000FF"];
 const TITLE="Attribute Name";
 const LIGHT_BACKGROUND="white";
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          Normal without sizing problems
+          No sizing problems. Click for interactivity
         <CategoricalLegend
             width={250}
             height={125}
@@ -20,6 +20,7 @@ class App extends Component {
             colors={COLORS}
             background={LIGHT_BACKGROUND}
             title={TITLE}
+            onCategoryClick={(category)=>alert("you get some " + category)}
       />
           too short
           <CategoricalLegend
@@ -29,6 +30,7 @@ class App extends Component {
               colors={COLORS}
               background={DARK_BACKGROUND}
               title={TITLE}
+              onCategoryClick={(category)=>alert("you get some " + category)}
           />
           too skiny
           <CategoricalLegend
@@ -38,6 +40,7 @@ class App extends Component {
               colors={COLORS}
               background={LIGHT_BACKGROUND}
               title={TITLE}
+              onCategoryClick={(category)=>alert("you get some " + category)}
           />
       </div>
     );

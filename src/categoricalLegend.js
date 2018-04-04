@@ -10,15 +10,16 @@ import './legends.css';
 
 CategoricalLegend.propTypes = {
     title: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.string).isRequired,
+    categories: PropTypes.arrayOf(PropTypes.string).isRequired,
     colors: PropTypes.arrayOf(PropTypes.string).isRequired,
     background: PropTypes.string.isRequired,
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    height: PropTypes.number.isRequired,
+    onCategoryClick: PropTypes.func
 };
 
 export default function CategoricalLegend(
-    {title, categories, colors, height, width, background}
+    {title, categories, colors, height, width, background, onCategoryClick}
 ) {
     
     return <DiscreteColorLegend
@@ -28,6 +29,7 @@ export default function CategoricalLegend(
         height={height}
         width={width}
         background={background}
+        onItemClick={onCategoryClick}
     />
     
 }
