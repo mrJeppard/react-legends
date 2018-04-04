@@ -1,3 +1,11 @@
+# react-legends
+(soon to be) Interactive legends for react. Check out the examples by:
+
+`git clone https://github.com/mrJeppard/react-legends.git`
+`cd react-legends`
+`npm build`
+`npm start`
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
