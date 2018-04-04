@@ -42,7 +42,6 @@ function DiscreteColorLegend({
     const DARK_BORDER = "1px solid black";
     const border = background === "white" ? DARK_BORDER  : LIGHT_BORDER;
     const attrNameColor = background === "white" ? "black"  : "white";
-    console.log(border)
   return (
     <div className={`rv-discrete-color-legend ${orientation} ${className}`} style={{width, height, background, border}}>
        <div style={{textAlign: "center", color: attrNameColor, fontSize:16}}> {title} </div>

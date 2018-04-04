@@ -1,18 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CategoricalLegend from './categoricalLegend'
+import './legends.css';
+
+const CATEGORIES=["apples","oranges","man made orangutan"];
+const COLORS=["#FF1000", "#00FF10", "#1000FF"];
+const TITLE="Attribute Name";
+const LIGHT_BACKGROUND="white";
+const DARK_BACKGROUND="black";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          Normal without sizing problems
+        <CategoricalLegend
+            width={250}
+            height={125}
+            categories={CATEGORIES}
+            colors={COLORS}
+            background={LIGHT_BACKGROUND}
+            title={TITLE}
+      />
+          too short
+          <CategoricalLegend
+              width={250}
+              height={100}
+              categories={CATEGORIES}
+              colors={COLORS}
+              background={DARK_BACKGROUND}
+              title={TITLE}
+          />
+          too skiny
+          <CategoricalLegend
+              width={100}
+              height={150}
+              categories={CATEGORIES}
+              colors={COLORS}
+              background={LIGHT_BACKGROUND}
+              title={TITLE}
+          />
       </div>
     );
   }
