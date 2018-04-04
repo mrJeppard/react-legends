@@ -6,6 +6,23 @@ Interactive legends for react. Check out the examples by:
 `npm install`  
 `npm start`  
 
+CategoricalLegend
+=================
+
+
+Props
+-----
+Prop                  | Type     | Default                   | Required | Description
+--------------------- | -------- | ------------------------- | -------- | -----------
+title|string||Yes|The name of the attribute.
+categories|arrayOf[object Object]||Yes|The categories in the attribute.
+colors|arrayOf[object Object]||Yes|The colors associated with each category.
+background|string||Yes|Background color of the legend.
+width|number||Yes|Initial width of the legend.
+height|number||Yes|Initial height of the legend.
+onCategoryClick|func||No|onClick function has string in categories array for arg.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

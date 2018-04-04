@@ -9,12 +9,19 @@ import DiscreteColorLegend from './discrete-color-legend'
 import './legends.css';
 
 CategoricalLegend.propTypes = {
+    /** The name of the attribute. */
     title: PropTypes.string.isRequired,
+    /** The categories in the attribute. */
     categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+    /** The colors associated with each category. */
     colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+    /** Background color of the legend. */
     background: PropTypes.string.isRequired,
+    /** Initial width of the legend. */
     width: PropTypes.number.isRequired,
+    /** Initial height of the legend. */
     height: PropTypes.number.isRequired,
+    /** onClick function has string in categories array for arg. */
     onCategoryClick: PropTypes.func
 };
 
