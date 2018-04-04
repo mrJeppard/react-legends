@@ -4,6 +4,7 @@
   overflow: auto;
   font-size: 12px;
   white-space: nowrap;
+  resize:both;
   &.horizontal {
     white-space: nowrap;
   }
